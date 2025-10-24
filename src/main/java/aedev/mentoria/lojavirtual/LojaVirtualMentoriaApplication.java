@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication
-@EntityScan(basePackages = "devjava.lojavirtual.model")
+@EntityScan(basePackages = "aedev.mentoria.lojavirtual.model")
 
 public class LojaVirtualMentoriaApplication {
 

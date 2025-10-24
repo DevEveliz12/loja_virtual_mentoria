@@ -2,6 +2,9 @@ package aedev.mentoria.lojavirtual.model;
 
 import java.io.Serializable;
 
+import org.hibernate.annotations.Collate;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +22,7 @@ private static final long serialVersionUID = 1L;
 @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_marca_produto")
 private Long id;
 
+@Column(nullable = false)
 private String nomeDesc;
 
 public long getId() {
