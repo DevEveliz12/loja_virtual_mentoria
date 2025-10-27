@@ -39,10 +39,7 @@ public class PessoaFisica extends Pessoa {
 		this.dataNascimento = dataNascimento;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
+	
 	
 	
 	

@@ -17,6 +17,7 @@ private String inscMunicipal;
 private String nomeFantasia;
 private String razaoSocial;
 private String categoriaString;
+
 public String getCnpj() {
 	return cnpj;
 }
@@ -52,9 +53,6 @@ public String getCategoriaString() {
 }
 public void setCategoriaString(String categoriaString) {
 	this.categoriaString = categoriaString;
-}
-public static long getSerialversionuid() {
-	return serialVersionUID;
 }
 
 
