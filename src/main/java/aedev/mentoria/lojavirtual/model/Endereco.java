@@ -2,6 +2,7 @@ package aedev.mentoria.lojavirtual.model;
 
 
 import java.io.Serializable;
+import java.util.Objects;
 
 import org.hibernate.annotations.ManyToAny;
 import org.hibernate.mapping.Constraint;
@@ -31,6 +32,7 @@ public class Endereco  implements Serializable{
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_endereco")
   private Long id;
   
+  private String cidade;
   private String ruaLogra;
   private String cep;
   private String numero;
@@ -42,7 +44,8 @@ public class Endereco  implements Serializable{
   
   //Muitos enderecos para uma pessoa
   @ManyToOne(targetEntity = Pessoa.class)
-  @JoinColumn(name = "pessoa_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT))
+  @JoinColumn(name = "pessoa_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT,
+  name = "pessoa_fk"))
   private Pessoa pessoa;
   
   @Enumerated(EnumType.STRING)
@@ -119,6 +122,24 @@ public class Endereco  implements Serializable{
   public void setPessoa(Pessoa pessoa) {
 	this.pessoa = pessoa;
   }
+
+  @Override
+  public int hashCode() {
+	return Objects.hash(id);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	Endereco other = (Endereco) obj;
+	return Objects.equals(id, other.id);
+  }
+  
   
   
   

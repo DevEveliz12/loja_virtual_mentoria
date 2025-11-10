@@ -16,7 +16,7 @@ private String inscEstadual;
 private String inscMunicipal;
 private String nomeFantasia;
 private String razaoSocial;
-private String categoriaString;
+private String categoria;
 
 public String getCnpj() {
 	return cnpj;
@@ -48,11 +48,11 @@ public String getRazaoSocial() {
 public void setRazaoSocial(String razaoSocial) {
 	this.razaoSocial = razaoSocial;
 }
-public String getCategoriaString() {
-	return categoriaString;
+public String getCategoria() {
+	return categoria;
 }
-public void setCategoriaString(String categoriaString) {
-	this.categoriaString = categoriaString;
+public void setCategoria(String categoria) {
+	this.categoria = categoria;
 }
 
 

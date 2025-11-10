@@ -33,6 +33,7 @@ public class ContaPagar implements Serializable {
 
 	private String descricao;
 
+	@JoinColumn(nullable = false)
 	@Enumerated(EnumType.STRING)
 	private StatusContaPagar status;
 
